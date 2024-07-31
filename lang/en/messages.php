@@ -1,0 +1,43 @@
+<?php
+
+declare(strict_types=1);
+
+return [
+    'arabic','ar' => 'arabic',
+    'Persian','fa' => 'Persian',
+    'english','en' => 'english',
+    'Japanese','ja' => 'Japanese',
+    'Franch','fr' => 'French',
+    'Chinese','chn' => 'Chinese',
+    'Turkce','tr' => 'Turkish',
+    'Russian','ru' => 'Russian',
+    'Dutch','nl' => 'Dutch',
+    'Italy','Italian','ita' => 'Italian',
+    'German','de' => 'German',
+    '','' => '',
+    '','' => '',
+    '','' => '',
+    '','' => '',
+    '' => '',
+    '' => '',
+    '' => '',
+    '' => '',
+    '' => '',
+    '' => '',
+    '' => '',
+    '' => '',
+    '' => '',
+    '' => '',
+    '' => '',
+    '' => '',
+    '' => '',
+    '' => '',
+    '' => '',
+    '' => '',
+    '' => '',
+    '' => '',
+    '' => '',
+    '' => '',
+    '' => '',
+
+];
