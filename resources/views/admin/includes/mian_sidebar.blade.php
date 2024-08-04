@@ -195,7 +195,7 @@
                     <li class="nav-item">
                         <a href="{{route('admin.meals')}}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
-                            <p>عرض جميع اللغات </p>
+                            <p>عرض جميع الوجبات </p>
                         </a>
                     </li>
 

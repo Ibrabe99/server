@@ -4,18 +4,16 @@ namespace App\Observers;
 
 use App\Models\MainCategory;
 
-class MainCategoryObserver
+class SubCategoryObserver
 {
     /**
      * Handle the MainCategory "created" event.
      */
-    public function created(MainCategory $mainCategory): void
+    public function created(MainCategory $subCategory): void
     {
-        $mainCategory -> vendors(['active' => $mainCategory -> active()]);
-        $mainCategory -> subCategories(['active' => $mainCategory -> active()]);
-        $mainCategory -> add_meal(['active' => $mainCategory -> active()]);
-
-
+        $subCategory -> vendors(['active' => $subCategory -> active()]);
+        $subCategory -> subCategories(['active' => $subCategory -> active()]);
+        $subCategory -> meal(['active' => $subCategory -> active()]);
     }
 
     /**

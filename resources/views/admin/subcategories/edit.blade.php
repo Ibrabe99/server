@@ -14,7 +14,7 @@
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item active">تعديل - {{$mainCategory->name}}</li>
-                        <li class="breadcrumb-item"><a href="{{route('admin.maincategories')}}">عرض الأقسام</a></li>
+                        <li class="breadcrumb-item"><a href="{{route('admin.maincategories')}}">عرض الأقسام الفرعية</a></li>
                         <li class="breadcrumb-item"><a href="{{route('admin.dashboard')}}">الصفحة الرئيسية</a></li>
                     </ol>
                 </div><!-- /.col -->
@@ -25,18 +25,22 @@
     @include('admin.includes.alerts.errors')
     @include('admin.includes.alerts.success')
 
-    <form action="{{route('admin.maincategories.update', $mainCategory->id)}}" method="post" enctype="multipart/form-data">
+    <form action="{{route('admin.maincategories.update', $subCategory->id)}}" method="post" enctype="multipart/form-data">
         @csrf
-        <input name="id" value="{{$mainCategory -> id}}" type="hidden">
+        <input name="id" value="{{$subCategory -> id}}" type="hidden">
 
         <div class="form-group">
             <div class="text-center">
-                <img src="{{$mainCategory->photo}}" class="rounded-circle" style="height: 350px;" alt="صورة القسم">
+                <img src="{{$subCategory->photo}}" class="rounded-circle" style="height: 350px;" alt="صورة القسم">
             </div>
         </div>
 
         <div class="content" dir="rtl">
             <section class="content" dir="rtl">
+
+
+
+
 
                 <div class="container-fluid">
                     <div class="row">
@@ -58,6 +62,22 @@
                                         </button>
                                     </div>
                                 </div>
+
+
+                                <div class="form-group col-6 mt-3">
+                                    <label class="float-right">اختر القسم الرئيسي</label>
+                                    <select class="form-control select2 float-left"   name="category_id">
+                                        <optgroup label="من فضلك اختر القسم">
+                                            @if($categories && $categories -> count() > 0)
+                                                @foreach($categories as $category)
+                                                    <option  value="{{$category -> id}}">{{$category -> name}}</option>
+                                                @endforeach
+                                            @endif
+                                        </optgroup>
+
+                                    </select>
+                                </div>
+
                                 <div class="card-body">
                                     <div class="row border pb-3 mt-5 clearfix">
                                         <div class="col-12 mt-3">

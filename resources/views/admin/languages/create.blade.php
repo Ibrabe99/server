@@ -81,7 +81,7 @@
 
                         <div class="form-group col-6 mt-5">
                             <label class="float-right">الإتجاه</label>
-                            <select class="form-control select2bs4"  name="direction"  style="height: 55px">
+                            <select class="form-control "  name="direction"  style="height: 55px">
                                 <option selected placeholder="rwt">اختر إتجاه اللغة.......</option>
                                 <option  value="rtl">من اليمين إلى اليسار</option>
                                 <option value="ltr">من اليسار إلى اليمين</option>

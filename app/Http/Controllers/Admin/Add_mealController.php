@@ -66,7 +66,7 @@ class Add_mealController extends Controller
             $price = $request -> price;
 
 
-            return $request;
+
             // بدء عملية الحفظ
             DB::beginTransaction();
 

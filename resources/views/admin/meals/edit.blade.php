@@ -14,7 +14,7 @@
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item active">تعديل - {{$mainCategory->name}}</li>
-                        <li class="breadcrumb-item"><a href="{{route('admin.maincategories')}}">عرض الأقسام</a></li>
+                        <li class="breadcrumb-item"><a href="{{route('admin.meals')}}">عرض الوحبات</a></li>
                         <li class="breadcrumb-item"><a href="{{route('admin.dashboard')}}">الصفحة الرئيسية</a></li>
                     </ol>
                 </div><!-- /.col -->
