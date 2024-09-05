@@ -89,7 +89,7 @@
                             <tr>
                                 <td>{{$meal -> name}}</td>
                                 <td> <img style="width: 80px; height: 50px" src="{{ asset($meal->photo) }}"></td>
-                                <td>{{$meal -> description()}}</td>
+                                <td>{{$meal -> description}}</td>
                                 <td>{{get_default_language()}}</td>
                                 <td>{{$meal -> getActive()}}</td>
                                 <td>{{$meal -> category -> name}}</td>
@@ -109,7 +109,7 @@
 
                                 <div class="mt-2">
 
-                                  <a href="" class="btn btn-warning">
+                                  <a href="{{ route('admin.meals.status', $meal->id) }}" class="btn btn-warning">
                                       @if($meal -> active == 0)
                                           تفعيل
                                       @else
@@ -142,8 +142,10 @@
                         <tr>
                             <th>الإسم</th>
                             <th>الصورة</th>
+                            <th>الوصف</th>
                             <th>اللغة</th>
                             <th>الحالة</th>
+                            <th>القسم التابع له</th>
                             <th>الإجراء</th>
                         </tr>
                         </tfoot>

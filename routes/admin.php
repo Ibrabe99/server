@@ -98,6 +98,9 @@ Route::group(['namespace' => 'App\Http\Controllers\Admin', 'prefix' => 'admin','
             ##################### delete #####################
             Route::get('delete/{id}', [SubCategoriesController::class, 'delete'])->name('admin.subcategories.delete');
 
+            ##################### changeStatus #####################
+            Route::get('changeStatus/{id}', [MainCategoriesController::class, 'changeStatus'])->name('admin.subcategories.status');
+
 
         });
 
@@ -121,6 +124,9 @@ Route::group(['namespace' => 'App\Http\Controllers\Admin', 'prefix' => 'admin','
 
         ##################### delete #####################
         Route::get('subcategory/{id}', [VendorsController::class, 'delete'])->name('admin.vendors.delete');
+
+        ##################### changeStatus #####################
+        Route::get('changeStatus/{id}', [MainCategoriesController::class, 'changeStatus'])->name('admin.vendors.status');
 
 
     });
@@ -146,6 +152,9 @@ Route::group(['namespace' => 'App\Http\Controllers\Admin', 'prefix' => 'admin','
 
         ##################### delete #####################
         Route::get('meals/{id}', [Add_mealController::class, 'delete'])->name('admin.meals.delete');
+
+        ##################### changeStatus #####################
+        Route::get('changeStatus/{id}', [MainCategoriesController::class, 'changeStatus'])->name('admin.meals.status');
 
 
     });

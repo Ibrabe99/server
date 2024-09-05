@@ -107,7 +107,7 @@
 
                                 <div class="mt-2">
 
-                                  <a href="" class="btn btn-warning">
+                                  <a href="{{ route('admin.subcategories.status', $category->id) }}" class="btn btn-warning">
                                       @if($category -> active == 0)
                                           تفعيل
                                       @else
